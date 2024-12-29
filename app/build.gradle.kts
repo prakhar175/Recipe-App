@@ -52,6 +52,7 @@ android {
 dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.retrofit)
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation(libs.convertor.gson)
     implementation(libs.coil.compose)
     implementation(libs.androidx.core.ktx)
