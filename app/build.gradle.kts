@@ -1,11 +1,12 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("kotlin-parcelize")
 }
 
 android {
     namespace = "com.example.recipeapp"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.recipeapp"
@@ -52,7 +53,15 @@ android {
 dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.retrofit)
-//    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation(libs.androidx.navigation.compose)
+
+    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.navigation.ui)
+
+    // Feature module support for Fragments
+    implementation(libs.androidx.navigation.dynamic.features.fragment)
+    // JSON serialization library, works with the Kotlin serialization plugin
+//    implementation(libs.kotlinx.serialization.json)
     implementation(libs.convertor.gson)
     implementation(libs.coil.compose)
     implementation(libs.androidx.core.ktx)
